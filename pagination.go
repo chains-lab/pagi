@@ -12,8 +12,8 @@ type Response struct {
 }
 
 type SortField struct {
-	Field     string
-	Direction string // "asc" или "desc"
+	Field  string
+	Ascend bool // "asc" или "desc"
 }
 
 func CalculateLimitOffset(req Request) (limit uint64, offset uint64) {
