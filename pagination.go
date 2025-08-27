@@ -11,6 +11,11 @@ type Response struct {
 	Total uint64 `json:"total"`
 }
 
+type SortField struct {
+	Field     string
+	Direction string // "asc" или "desc"
+}
+
 func CalculateLimitOffset(req Request) (limit uint64, offset uint64) {
 	limit = req.Size
 	offset = (req.Page - 1) * req.Size
